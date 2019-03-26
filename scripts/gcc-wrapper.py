@@ -62,7 +62,7 @@ allowed_warnings = set([
    "xt_socket.c:161",
    "inet_hashtables.h:356",
    "xc4000.c:1049",
-   "xc4000.c:1063",	
+   "xc4000.c:1063",
    "f_qdss.c:586",
    "mipi_tc358764_dsi2lvds.c:746",
    "dynamic_debug.h:75",
@@ -107,7 +107,7 @@ def run_gcc():
         proc = subprocess.Popen(args, stderr=subprocess.PIPE)
         for line in proc.stderr:
             print line,
-            interpret_warning(line)
+            # interpret_warning(line)
 
         result = proc.wait()
     except OSError as e:
